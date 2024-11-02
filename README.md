@@ -31,8 +31,8 @@ Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di co
 | 2   | [Instalasi](#instalasi)                    |
 | 3   | [1. Buat Topik Kafka untuk Data Suhu](#buat-topik-kafka-untuk-data-suhu) |
 | 4   | [2. Simulasikan Data Suhu dengan Producer](#simulasikan-data-suhu-dengan-producer)      |
-| 5   | [3. Konsumsi dan Olah Data dengan PySpark](#konsumsi-dan-olah-data-dengan-pyspark)
-| 6   | [Struktur Program](#struktur-program)      |
+| 5   | [3. Konsumsi dan Olah Data dengan PySpark](#konsumsi-dan-olah-data-dengan-pyspark) |
+| 6   | [Struktur Kode](#struktur-kode)      |
 | 7   | [4. Output](#output)        |
 
 ---
@@ -114,7 +114,7 @@ Langkah 1 **Membuat dan Menjalankan Code Producer**
    ```bash
    python producer.py
    ```
-### 3. ▶️ Konsumsi dan Olah Data dengan PySpark
+### 3. ▶️ Konsumsi dan Olah Data dengan PySpark   
 Langkah 1 **Membuat dan Menjalankan Code Consumer**
 - **Kode Consumer** akan membaca data dari topik `sensor-suhu` dan menampilkan data suhu di atas 80°C sebagai peringatan.
 - Simpan kode berikut di file bernama `consumer.py` dan jalankan.
