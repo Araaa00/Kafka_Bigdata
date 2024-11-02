@@ -69,13 +69,13 @@ Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di co
 ## Tugas
 ### 🚀 1. Buat Topik Kafka untuk Data Suhu
 
-1. **Buat Topik untuk Data Sensor**
+Langkah 1 **Buat Topik untuk Data Sensor**
    - Jalankan perintah ini untuk membuat topik bernama `sensor-suhu` di Kafka:
      ```bash
      bin/kafka-topics.sh --create --topic sensor-suhu --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
      ```
 
-2. **Cek Topik**
+Langkah 2 **Cek Topik**
    - Pastikan topik `sensor-suhu` berhasil dibuat:
      ```bash
      bin/kafka-topics.sh --list --bootstrap-server localhost:9092
@@ -83,7 +83,7 @@ Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di co
 
 ### ▶️ 2. Simulasikan Data Suhu dengan Producer
 
-#### Membuat dan Menjalankan Code Producer
+Langkah 1 **Membuat dan Menjalankan Code Producer**
 - **Kode Producer** akan mengirim data suhu acak dari tiga sensor setiap detik.
 - Simpan kode berikut di file bernama `producer.py` dan jalankan.
 
@@ -110,12 +110,12 @@ Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di co
        time.sleep(1)
    ```
 
-- **Menjalankan Producer**:
+  Langkah 2 **Menjalankan Producer**:
    ```bash
    python producer.py
    ```
 ### 3. ▶️ Konsumsi dan Olah Data dengan PySpark
-#### Membuat dan Menjalankan Code Consumer
+Langkah 1 **Membuat dan Menjalankan Code Consumer**
 - **Kode Consumer** akan membaca data dari topik `sensor-suhu` dan menampilkan data suhu di atas 80°C sebagai peringatan.
 - Simpan kode berikut di file bernama `consumer.py` dan jalankan.
 
@@ -152,7 +152,7 @@ Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di co
    query.awaitTermination()
    ```
 
-- **Menjalankan Consumer**:
+Langkah 2 **Menjalankan Consumer**:
    ```bash
    spark-submit consumer.py
    ```
