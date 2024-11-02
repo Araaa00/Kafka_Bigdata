@@ -1,5 +1,11 @@
 ## 📡 Pengumpulan Data Sensor IoT dengan Apache Kafka dan PySpark
 
+### 👥 Anggota Kelompok
+| Nama                    | NRP         |
+|-------------------------|-------------|
+| Mutiara Nurhaliza       | 5027221010  |
+| Rehana Putri Salsabilla | 5027221015  |
+
 ### 📝 Deskripsi Proyek
 Proyek ini adalah simulasi pengumpulan dan pemrosesan data dari sensor suhu di mesin pabrik menggunakan Apache Kafka dan PySpark. Data dikirim secara real-time setiap detik oleh beberapa sensor yang menghasilkan data suhu acak. Kafka digunakan sebagai penghubung aliran data, sementara PySpark digunakan untuk memfilter data yang dihasilkan, khususnya mendeteksi suhu tinggi (di atas 80°C) sebagai tanda peringatan sederhana.
 
