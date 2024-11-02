@@ -29,11 +29,11 @@ Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di co
 |-----|--------------------------------------------|
 | 1   | [Persyaratan Sistem](#persyaratan-sistem)  |
 | 2   | [Instalasi](#instalasi)                    |
-| 3   | [1. Buat Topik Kafka untuk Data Suhu](#1-buat-topik-kafka-untuk-data-suhu) |
-| 4   | [2. Simulasikan Data Suhu dengan Producer](#2-simulasikan-data-suhu-dengan-producer)      |
-| 5   | [3. Konsumsi dan Olah Data dengan PySpark](#3-konsumsi-dan-olah-data-dengan-pyspark) |
+| 3   | [Buat Topik Kafka untuk Data Suhu](#buat-topik-kafka-untuk-data-suhu) |
+| 4   | [Simulasikan Data Suhu dengan Producer](#simulasikan-data-suhu-dengan-producer)      |
+| 5   | [Konsumsi dan Olah Data dengan PySpark](#konsumsi-dan-olah-data-dengan-pyspark) |
 | 6   | [Struktur Kode](#struktur-kode)      |
-| 7   | [4. Output](#4-output) 
+| 7   | [Output](#output) 
 
 ---
 
@@ -67,7 +67,7 @@ Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di co
      ```
 
 ## Tugas
-### 🚀 1. Buat Topik Kafka untuk Data Suhu
+### 🚀 Buat Topik Kafka untuk Data Suhu
 
 Langkah 1 **Buat Topik untuk Data Sensor**
    - Jalankan perintah ini untuk membuat topik bernama `sensor-suhu` di Kafka:
@@ -81,7 +81,7 @@ Langkah 2 **Cek Topik**
      bin/kafka-topics.sh --list --bootstrap-server localhost:9092
      ```
 
-### ▶️ 2. Simulasikan Data Suhu dengan Producer
+### ▶️ Simulasikan Data Suhu dengan Producer
 
 Langkah 1 **Membuat dan Menjalankan Code Producer**
 - **Kode Producer** akan mengirim data suhu acak dari tiga sensor setiap detik.
@@ -114,7 +114,7 @@ Langkah 1 **Membuat dan Menjalankan Code Producer**
    ```bash
    python producer.py
    ```
-### 3. ▶️ Konsumsi dan Olah Data dengan PySpark   
+### ▶️ Konsumsi dan Olah Data dengan PySpark   
 Langkah 1 **Membuat dan Menjalankan Code Consumer**
 - **Kode Consumer** akan membaca data dari topik `sensor-suhu` dan menampilkan data suhu di atas 80°C sebagai peringatan.
 - Simpan kode berikut di file bernama `consumer.py` dan jalankan.
@@ -166,7 +166,7 @@ Langkah 2 **Menjalankan Consumer**:
 - Pastikan Kafka dan Zookeeper sudah berjalan sebelum menjalankan producer dan consumer.
 - Pastikan semua dependencies sudah terpasang sesuai dengan versi yang digunakan di Spark dan Kafka.
 
-### 📊 4. Output
+### 📊 Output
 Hasil pengujian berupa output dari consumer di PySpark yang memfilter data suhu di atas 80°C dan menampilkannya di console. Setiap data suhu berisi ID sensor dan suhu saat ini, seperti `sensor_id: S1, suhu: 70°C`. Consumer membaca data dari topik "sensor-suhu" dan hanya menampilkan suhu yang berada di atas 80°C sebagai indikator suhu yang perlu diperhatikan.
 
 ![Contoh Output PySpark](img/output.png)
