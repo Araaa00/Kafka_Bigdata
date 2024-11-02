@@ -33,7 +33,7 @@ Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di co
 | 4   | [2. Simulasikan Data Suhu dengan Producer](#simulasikan-data-suhu-dengan-producer)      |
 | 5   | [3. Konsumsi dan Olah Data dengan PySpark](#konsumsi-dan-olah-data-dengan-pyspark) |
 | 6   | [Struktur Kode](#struktur-kode)      |
-| 7   | [4. Output](#output)        |
+| 7   | [4. Output](#output) 
 
 ---
 
