@@ -27,13 +27,13 @@ Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di co
 ### 📑 Daftar Isi
 | No  | Deskripsi                                  |
 |-----|--------------------------------------------|
-| 1   | [Persyaratan Sistem](#persyaratan-sistem)  |
-| 2   | [Instalasi](#instalasi)                    |
-| 3   | [Buat Topik Kafka untuk Data Suhu](#buat-topik-kafka-untuk-data-suhu) |
-| 4   | [Simulasikan Data Suhu dengan Producer](#simulasikan-data-suhu-dengan-producer)      |
-| 5   | [Konsumsi dan Olah Data dengan PySpark](#konsumsi-dan-olah-data-dengan-pyspark) |
-| 6   | [Struktur Kode](#struktur-kode)      |
-| 7   | [Output](#output) 
+| 1   | [1️⃣Persyaratan Sistem](#1️⃣-persyaratan-sistem)  |
+| 2   | [🛠️Instalasi](#🛠️-instalasi)                    |
+| 3   | [🚀Buat Topik Kafka untuk Data Suhu](#🚀-buat-topik-kafka-untuk-data-suhu) |
+| 4   | [▶️Simulasikan Data Suhu dengan Producer](#▶️-simulasikan-data-suhu-dengan-producer)      |
+| 5   | [▶️Konsumsi dan Olah Data dengan PySpark](#▶️-konsumsi-dan-olah-data-dengan-pyspark) |
+| 6   | [🗂️Struktur Kode](#🗂️-struktur-kode)      |
+| 7   | [📊Output](#📊-output) 
 
 ---
 
