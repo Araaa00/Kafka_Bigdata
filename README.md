@@ -7,7 +7,7 @@
 | Rehana Putri Salsabilla | 5027221015  |
 
 ### 📝 Deskripsi Proyek
-Proyek ini adalah simulasi pengumpulan dan pemrosesan data dari sensor suhu di mesin pabrik menggunakan Apache Kafka dan PySpark. Data dikirim secara real-time setiap detik oleh beberapa sensor yang menghasilkan data suhu acak. Kafka digunakan sebagai penghubung aliran data, sementara PySpark digunakan untuk memfilter data yang dihasilkan, khususnya mendeteksi suhu tinggi (di atas 80°C) sebagai tanda peringatan sederhana.
+Simulasi pengumpulan dan pemrosesan data dari sensor suhu di mesin pabrik menggunakan Apache Kafka dan PySpark. Data dikirim secara real-time setiap detik oleh beberapa sensor yang menghasilkan data suhu acak. Kafka digunakan sebagai penghubung aliran data, sementara PySpark digunakan untuk memfilter data yang dihasilkan, khususnya mendeteksi suhu tinggi (di atas 80°C) sebagai tanda peringatan sederhana.
 
 ### 📑 Daftar Isi
 1. [Persyaratan Sistem](#persyaratan-sistem)
@@ -142,6 +142,3 @@ Proyek ini adalah simulasi pengumpulan dan pemrosesan data dari sensor suhu di m
 ### 📌 Catatan Tambahan
 - Pastikan Kafka dan Zookeeper sudah berjalan sebelum menjalankan producer dan consumer.
 - Pastikan semua dependencies sudah terpasang sesuai dengan versi yang digunakan di Spark dan Kafka.
-- Kamu bisa menyesuaikan interval pengiriman dan ambang suhu di script `producer.py` jika diperlukan.
-
-Selamat mencoba, dan semoga berhasil! 😊
