@@ -9,15 +9,31 @@
 ### 📝 Deskripsi Proyek
 Simulasi pengumpulan dan pemrosesan data dari sensor suhu di mesin pabrik menggunakan Apache Kafka dan PySpark. Data dikirim secara real-time setiap detik oleh beberapa sensor yang menghasilkan data suhu acak. Kafka digunakan sebagai penghubung aliran data, sementara PySpark digunakan untuk memfilter data yang dihasilkan, khususnya mendeteksi suhu tinggi (di atas 80°C) sebagai tanda peringatan sederhana.
 
+### 📝 Tugas 
+#### 1. Buat Topik Kafka untuk Data Suhu:<br>
+Buat topik di Apache Kafka bernama "sensor-suhu" yang akan menerima data suhu dari sensor-sensor mesin.
+
+#### 2. Simulasikan Data Suhu dengan Producer:<br>
+Buat producer sederhana yang mensimulasikan data suhu dari beberapa sensor mesin (misalnya, 3 sensor berbeda).
+Setiap data suhu berisi ID sensor dan suhu saat ini (misalnya, sensor_id: S1, suhu: 70°C), dan dikirim setiap detik ke topik "sensor-suhu".
+
+#### 3. Konsumsi dan Olah Data dengan PySpark:<br>
+Buat consumer di PySpark yang membaca data dari topik "sensor-suhu".
+Filter data suhu yang berada di atas 80°C, sebagai indikator suhu yang perlu diperhatikan.
+
+#### 4. Output dan Analisis:<br>
+Cetak data yang suhu-nya melebihi 80°C sebagai tanda peringatan sederhana di console.
+
 ### 📑 Daftar Isi
 | No  | Deskripsi                                  |
 |-----|--------------------------------------------|
 | 1   | [Persyaratan Sistem](#persyaratan-sistem)  |
 | 2   | [Instalasi](#instalasi)                    |
-| 3   | [Menjalankan Kafka dan Membuat Topik](#menjalankan-kafka-dan-membuat-topik) |
-| 4   | [Menjalankan Producer dan Consumer](#menjalankan-producer-dan-consumer)      |
-| 5   | [Struktur Program](#struktur-program)      |
-| 6   | [Hasil Pengujian](#hasil-pengujian)        |
+| 3   | [1. Buat Topik Kafka untuk Data Suhu](#buat-topik-kafka-untuk-data-suhu) |
+| 4   | [2. Simulasikan Data Suhu dengan Producer](#simulasikan-data-suhu-dengan-producer)      |
+| 5   | [3. Konsumsi dan Olah Data dengan PySpark](#konsumsi-dan-olah-data-dengan-pyspark)
+| 6   | [Struktur Program](#struktur-program)      |
+| 7   | [4. Output](#output)        |
 
 ---
 
@@ -50,7 +66,8 @@ Simulasi pengumpulan dan pemrosesan data dari sensor suhu di mesin pabrik menggu
      pip install kafka-python pyspark
      ```
 
-### 🚀 Menjalankan Kafka dan Membuat Topik
+## Tugas
+### 🚀 1. Buat Topik Kafka untuk Data Suhu
 
 1. **Buat Topik untuk Data Sensor**
    - Jalankan perintah ini untuk membuat topik bernama `sensor-suhu` di Kafka:
@@ -64,9 +81,9 @@ Simulasi pengumpulan dan pemrosesan data dari sensor suhu di mesin pabrik menggu
      bin/kafka-topics.sh --list --bootstrap-server localhost:9092
      ```
 
-### ▶️ Menjalankan Producer dan Consumer
+### ▶️ 2. Simulasikan Data Suhu dengan Producer
 
-#### Langkah 1: Menjalankan Producer
+#### Membuat dan Menjalankan Code Producer
 - **Kode Producer** akan mengirim data suhu acak dari tiga sensor setiap detik.
 - Simpan kode berikut di file bernama `producer.py` dan jalankan.
 
@@ -97,8 +114,8 @@ Simulasi pengumpulan dan pemrosesan data dari sensor suhu di mesin pabrik menggu
    ```bash
    python producer.py
    ```
-
-#### Langkah 2: Menjalankan Consumer
+### 3. ▶️ Konsumsi dan Olah Data dengan PySpark
+#### Membuat dan Menjalankan Code Consumer
 - **Kode Consumer** akan membaca data dari topik `sensor-suhu` dan menampilkan data suhu di atas 80°C sebagai peringatan.
 - Simpan kode berikut di file bernama `consumer.py` dan jalankan.
 
@@ -149,7 +166,7 @@ Simulasi pengumpulan dan pemrosesan data dari sensor suhu di mesin pabrik menggu
 - Pastikan Kafka dan Zookeeper sudah berjalan sebelum menjalankan producer dan consumer.
 - Pastikan semua dependencies sudah terpasang sesuai dengan versi yang digunakan di Spark dan Kafka.
 
-### 📊 Hasil Pengujian
+### 📊 4. Output
 Hasil pengujian berupa output dari consumer di PySpark yang memfilter data suhu di atas 80°C dan menampilkannya di console. Setiap data suhu berisi ID sensor dan suhu saat ini, seperti `sensor_id: S1, suhu: 70°C`. Consumer membaca data dari topik "sensor-suhu" dan hanya menampilkan suhu yang berada di atas 80°C sebagai indikator suhu yang perlu diperhatikan.
 
 ![Contoh Output PySpark](img/output.png)
