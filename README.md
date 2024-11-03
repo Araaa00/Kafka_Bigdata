@@ -6,7 +6,7 @@
 | Mutiara Nurhaliza       | 5027221010  |
 | Rehana Putri Salsabilla | 5027221015  |
 
-### 📝 Deskripsi Proyek
+### 📝 Deskripsi Tugas
 Simulasi pengumpulan dan pemrosesan data dari sensor suhu di mesin pabrik menggunakan Apache Kafka dan PySpark. Data dikirim secara real-time setiap detik oleh beberapa sensor yang menghasilkan data suhu acak. Kafka digunakan sebagai penghubung aliran data, sementara PySpark digunakan untuk memfilter data yang dihasilkan, khususnya mendeteksi suhu tinggi (di atas 80°C) sebagai tanda peringatan sederhana.
 
 ### 📝 Tugas 
@@ -81,11 +81,10 @@ Langkah 2 **Cek Topik**
      bin/kafka-topics.sh --list --bootstrap-server localhost:9092
      ```
 
-### ▶️ Simulasikan Data Suhu dengan Producer
+### ▶️ Simulasi Data Suhu dengan Producer
 
 Langkah 1 **Membuat dan Menjalankan Code Producer**
 - **Kode Producer** akan mengirim data suhu acak dari tiga sensor setiap detik.
-- Simpan kode berikut di file bernama `producer.py` dan jalankan.
 
    ```python
    from kafka import KafkaProducer
@@ -114,11 +113,9 @@ Langkah 1 **Membuat dan Menjalankan Code Producer**
    ```bash
    python producer.py
    ```
-### ▶️ Konsumsi dan Olah Data dengan PySpark   
+### ▶️ Consumer dan Olah Data dengan PySpark   
 Langkah 1 **Membuat dan Menjalankan Code Consumer**
 - **Kode Consumer** akan membaca data dari topik `sensor-suhu` dan menampilkan data suhu di atas 80°C sebagai peringatan.
-- Simpan kode berikut di file bernama `consumer.py` dan jalankan.
-
    ```python
    from pyspark.sql import SparkSession
    from pyspark.sql import functions as F
