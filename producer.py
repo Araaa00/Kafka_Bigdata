@@ -16,7 +16,6 @@ while True:
             'temperature': temperature
         }
         
-        # Kirim data ke topik
         producer.send('sensor-suhu', value=data)
         print(f'Sent: {data}')
         
